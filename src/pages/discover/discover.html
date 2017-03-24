@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Sorozat Ajánló</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (submit)="onSubmitDiscover()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed text-center>Kategóriák</ion-label>  
+        <ion-select [(ngModel)]="genre" name="genre">
+        <ion-option *ngFor="let genre of genres" [value]="genre.id">{{genre.category}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed text-center>Év</ion-label>  
+        <ion-select [(ngModel)]="date" name="date">
+          <ion-option *ngFor="let date of dates" [value]="date">{{date}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <button ion-button type="submit" block>Küldés</button>
+    </ion-list>  
+  </form>
+</ion-content>

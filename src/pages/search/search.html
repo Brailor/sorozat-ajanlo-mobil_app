@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Keresés</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (submit)="onSubmitSearch()">
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Keresés</ion-label>
+            <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+        </ion-item>
+        <div padding>
+            <button ion-button type="submit" block>Küldés</button>
+        </div>
+    </ion-list>  
+  </form>
+</ion-content>

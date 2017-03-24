@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      {{Show?.Title || Show?.title}}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary">Vissza</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="{{Show?.Poster || Show?.poster}}">
+        </ion-thumbnail>
+        <ion-icon item-left name="easel"></ion-icon><h2>Első adás: ( {{Show?.Released || Show?.released}} )</h2>
+        <p><b>Évadok:</b> {{Show?.totalSeasons || Show?.total_seasons}} || <b>Műsoridő: </b> {{Show?.Runtime || Show?.runtime}}</p>
+      </ion-item>
+      <ion-item>
+          <ion-icon item-left name="stats"></ion-icon><h2>Rating: <b>{{Show?.imdbRating || Show?.imdb_rating}}</b> [ {{Show?.imdbVotes || Show?.imdb_votes}} ] szavazat alapján.</h2>
+      </ion-item>
+      <ion-item text-wrap>
+        <b>Rövid leírás:</b><br>
+        {{Show?.Plot || Show?.plot}}
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-8 offset-2>
+            <a ion-button block target="_blank" href="http://www.imdb.com/title/{{Show?.imdbID || Show?.imdb_i_d}}/">Bővebben az Imdb.com-on</a>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-list>
+</ion-content>

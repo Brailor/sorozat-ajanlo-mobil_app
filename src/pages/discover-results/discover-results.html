@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Találatok</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+     <ion-list>
+      <a ion-item *ngFor ='let show of shows.data; let index = index' (click)="openModal(shows.data[index].id)">
+       <ion-card>
+            <img src="https://image.tmdb.org/t/p/w300{{show.poster_path}}" item-left />
+            <ion-card-content>
+                <ion-card-title item-right text-center>
+                {{show.name}}
+                </ion-card-title>
+            </ion-card-content>
+        </ion-card>
+      </a>
+    </ion-list>
+</ion-content>

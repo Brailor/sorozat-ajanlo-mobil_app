@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Főmenü</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h1 text-wrap text-center><b>Legfrisebb sorozatok, amiket érdemes lehet megnézni.
+</b></h1>
+    <ion-list>
+      <ion-item *ngFor ='let item of Recent'>
+        <ion-thumbnail *ngIf='item.poster_pic' item-left>
+          <img src="https://image.tmdb.org/t/p/w300{{item.poster_pic}}" alt="">
+        </ion-thumbnail>
+        <h2 text-wrap><b>{{item.name}}</b></h2>
+        <p>
+          <ion-icon name="color-palette">{{item.category}}</ion-icon><br>
+          <ion-icon name="calendar">{{item.created_at}}</ion-icon>
+        </p>
+          <button ion-button clear item-right (click)='viewItem(item.show_id)'>Bővebben</button>
+      </ion-item>
+    </ion-list>
+    <p text-center>A lista naponta frissül.</p>
+</ion-content>
