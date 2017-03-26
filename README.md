@@ -4,4 +4,4 @@ Ionic2 framework alatt készült, még fejlesztés fázisban.
 
 ## Letöltés (egyelőre csak Androidra)
 
-<a href="https://data.hu/get/10410619/sorozat-prot.apk.7z">Link</a>
+<a href="https://data.hu/get/10414351/android-debug.apk">Link</a>
